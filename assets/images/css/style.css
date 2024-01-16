@@ -1,0 +1,56 @@
+
+:root {
+    --bs-link-color: #198754; /*ajusta a cor de todos os textos de link do html*/
+    --bs-link-hover-color: #146c43;/*ajusta a cor de todos os testos de link do html,  após ser clicado pelo mouse */
+
+}
+
+
+.btn {
+    --bs-btn-bg: #198754; /*altera a cor de fundo do botão*/
+    --bs-btn-border-color: #146c43; /*altera a cor da borda do botão*/
+    --bs-btn-hover-bg: #146c43; /*altera a cor de fundo do botão quando o mouse passar pelo botão*/
+    --bs-btn-hover-border-color: #146c43; /*altera a cor da borda do botão quando o mouse passar pelo botão*/
+    --bs-btn-active-bg: #0c5734; /*altera a cor do botão quando o mouse fica clicado de forma fixa no botão*/
+}
+
+main {
+    margin-top: 4.4rem; /*margem adicionada para deixar o menu e o carrossel separados, pois o fixed-top no menu ainda deixa o carrossel por de tráz do menu*/
+}
+
+section {
+    scroll-margin-top: 6rem; /*coloca um espaço no topo quando utiliza as ancoras de link, como um scroll de rolagem*/
+}
+
+.navbar-brand img {
+    width: 30px;
+}
+
+/* tamanho do carrossel*/
+.carousel-item {
+    height: 400px;
+}
+
+.carousel-item img {
+    height: 100%;
+    object-fit: cover; /* faz a imagem caber dentro do elemento, corrigindo a distorção*/
+    object-position: center;
+}
+
+.carousel-item::before { /*A confiração desse before dá uma coloração um pouco mais escura de forma gradiente nas imagens para melhorar a visibilidade do texto escrito em cada imagem*/
+    content: "";
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(transparent, rgb(31, 31, 31));
+    position: absolute;
+}
+
+.card-cardapio img { /* Esse seletor foi criado para definir um tamanho padrão para as imagens, já que as mesmas são escolhidas de forma aleatória e diversos tamanhos no site de origem*/
+    height: 300px;
+    object-fit: cover; /*faz a imagme cabber no elemento sem que haja distorção*/ 
+}
+
+.card-title + .card-text {
+    font-family: "cooperplate";
+    font-weight: bold;
+}
